@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9F365AAA-F3F1-42B6-9141-CBD788EBA513}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WorldGraphicsBehive</RootNamespace>
+    <AssemblyName>WorldGraphicsBehive</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\CSharpHeadFirst\BeehiveSimulator\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>2E71B694A798C43B970C78BCF8E4B4AEB0E9EC03</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>WorldGraphicsBehive_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bee.cs" />
+    <Compile Include="BeeWorldHelper\BeeAnimation.cs" />
+    <Compile Include="BeeWorldHelper\BeeData.cs" />
+    <Compile Include="BeeWorldHelper\Move.cs" />
+    <Compile Include="BeeWorldHelper\Target.cs" />
+    <Compile Include="BeeHive.cs" />
+    <Compile Include="BeeHiveForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BeeHiveForm.Designer.cs">
+      <DependentUpon>BeeHiveForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BeeHiveHelper\BeeHiveGraphics.cs" />
+    <Compile Include="DashboardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DashboardForm.Designer.cs">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Flower.cs" />
+    <Compile Include="FlowerHelper\FlowerData.cs" />
+    <Compile Include="FlowerHelper\FlowerLifeCycle.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="World.cs" />
+    <EmbeddedResource Include="BeeHiveForm.resx">
+      <DependentUpon>BeeHiveForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DashboardForm.resx">
+      <DependentUpon>DashboardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="WorldGraphicsBehive_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hive %28outside%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Flower.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant04.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant05.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant06.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant07.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant08.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant09.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant019.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plant19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee-animation-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee-animation-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee-animation-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee-animation-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hive %28inside%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee animation 1a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee animation 2a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee animation 3a.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bee animation 4a.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

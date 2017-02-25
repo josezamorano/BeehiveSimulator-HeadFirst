@@ -1,0 +1,7 @@
+This is a more versatile version of the Beehive Simulator project from the book C# Head First.
+In here, the bees can fly freely around the flowers and the flowers grow, die and news are born
+again to give the animation a more vivid expression.
+I also added the separate parts: The world, the flowers and the bee simulations so the project 
+is disected and can be studied in smaller parts. 
+
+I hope this code is useful to someone and that you enjoy it as much as I did. Thanks for all.
